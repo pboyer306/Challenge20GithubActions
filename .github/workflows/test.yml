@@ -22,4 +22,8 @@ jobs:
       run: npm install
 
     - name: Run Cypress tests
-      run: npm run test-component
+      uses: cypress-io/github-action@v6
+      with:  
+       build: npm run build
+       start: npm start
+       component: true
