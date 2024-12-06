@@ -30,4 +30,8 @@ jobs:
       run: npx wait-on http://localhost:3000
 
     - name: Run Cypress tests
-      run: npm run test:component
+      uses: cypress-io/github-action@v6
+      with:  
+       build: npm run build
+       start: npm start
+       component: true
